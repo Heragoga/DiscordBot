@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
+//initialisation
 client.once('ready', () => {
 console.log('Karol lebt!')
     client.user.setActivity("with Alex!")
@@ -16,13 +17,20 @@ console.log('Karol lebt!')
 //    });
 //    let botcommands = client.channels.cache.get("763467469942947840")
 });
-client.on("message", msg => {
-    if (msg.content === "/help"){
-        msg.reply("Brauchst du hilfe? ... das ist aber süß ... GRIEGST DU ABER NICHT!!!!!!! MUHAHAHAHAHA!!!!!")
-        
-    }
-})
 
+//main code
+commands()
+
+//Funktionen um platz im main code zu sparen
+
+function commands () {
+    client.on("message", msg => {
+        if (msg.content === "/help"){
+            msg.reply("Brauchst du hilfe? ... das ist aber süß ... GRIEGST DU ABER NICHT!!!!!!! MUHAHAHAHAHA!!!!!")
+            
+        }
+    })
+}
 
 //Do not delete!!!!!!!!!!
 client.login(process.env.token);

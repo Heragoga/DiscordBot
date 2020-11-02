@@ -16,7 +16,12 @@ console.log('Karol lebt!')
     });
     let botcommands = client.channels.cache.get("763467469942947840")
 });
-
+client.on("message", msg => {
+    if (msg.content === "/help"){
+        msg.reply("Brauchst du hilfe? ... das ist aber süß ... GRIEGST DU ABER NICHT!!!!!!! MUHAHAHAHAHA!!!!!")
+        
+    }
+})
 
 
 //Do not delete!!!!!!!!!!

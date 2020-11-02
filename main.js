@@ -26,7 +26,8 @@ commands()
 function commands () {
     client.on("message", msg => {
         if (msg.content === "/help"){
-            msg.reply("Brauchst du hilfe? ... das ist aber süß ... GRIEGST DU ABER NICHT!!!!!!! MUHAHAHAHAHA!!!!!")
+            msg.reply("Brauchst du Hilfe?")
+            setTimeout(() => {msg.reply("Das ist aber süß..."); }, 2000);
             
         }
     })

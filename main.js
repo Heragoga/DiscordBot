@@ -29,7 +29,7 @@ function commands () {
             msg.reply("Brauchst du Hilfe?")
             setTimeout(() => {msg.reply("Das ist aber süß..."); }, 2000);
             setTimeout(() => {msg.reply("GRIEGST DU ABER NICHT!!!!!"); }, 5000);
-            setTimeout(() => {msg.reply("MUHAHAHAHAHAHAHAHAHAHAHAHA!!!!!!"); }, 2000);
+            setTimeout(() => {msg.reply("MUHAHAHAHAHAHAHAHAHAHAHAHA!!!!!!"); }, 8000);
             
         }
     })

@@ -27,7 +27,7 @@ function commands () {
     client.on("message", msg => {
         if (msg.content === "/help"){
             msg.reply("Brauchst du Hilfe?")
-            setTimeout(() => {msg.reply("Das ist aber süß..."); }, 2000);
+            setTimeout(() => {msg.send("Das ist aber süß..."); }, 2000);
             
         }
     })

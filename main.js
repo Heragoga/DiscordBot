@@ -34,8 +34,8 @@ function commands () {
             
         }
         if (msg.content === "/hallo karol"){
-            client.message.send("Hallo!")
-            setTimeout(() => {client.message.send(any,"Wie gehts`s?");}, 2000)
+            msg.reply("Hallo!")
+            setTimeout(() => {msg.reply("Wie gehts`s?");}, 2000)
         }
     })
 }

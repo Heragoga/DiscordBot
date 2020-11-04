@@ -26,14 +26,18 @@ commands()
 function commands () {
     client.on("message", msg => {
         if (msg.content === "/help"){
-            msg.reply("Brauchst du Hilfe?")
-            setTimeout(() => {msg.reply("Das ist aber süß..."); }, 2000);
-            setTimeout(() => {msg.reply("GRIEGST DU ABER NICHT!!!!!"); }, 5000);
-            setTimeout(() => {msg.reply("MUHAHAHAHAHAHAHAHAHAHAHAHA!!!!!!"); }, 8000);
+            msg.reply("Hallo!")
+            setTimeout(() => {msg.reply("Ich bin Karol, der Chatbot von Damax´Discord Server."); }, 2000);
+            setTimeout(() => {msg.reply("Ich wurde von Heragoga gemacht und jetzt werde ich dir erzählen was ich kann. Meine Version ist 1.1"); }, 3000);
+            setTimeout(() => {msg.reply("Du kannst mit mir einfach chatten, aber ich verstehe nur Sätze die mit / anfangen, komplett klein geschrieben sind und grammatikalisch korrekt. Bitte schreibe ohne Satzzeichen."); }, 4000);
+            setTimeout(() => {msg.reply("Versuche </hallo karol>"); }, 5000);
             
+        }
+        if (msg.content === "/hallo karol"){
+            client.message.send("Hallo!");
+            setTimeout(() => {(client.message.send("Wie gehts`s?"); }, 2000);
         }
     })
 }
-
 //Do not delete!!!!!!!!!!
 client.login(process.env.token);

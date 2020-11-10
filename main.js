@@ -5,7 +5,7 @@ const client = new Discord.Client();
 //initialisation
 client.once('ready', () => {
 console.log('Karol lebt!')
-    client.user.setActivity("with Alex!")
+    client.user.setActivity("with Sebastian and Christovie!")
 //    console.log("Servers:")
 
  //   client.guilds.cache.forEach((guild) => {

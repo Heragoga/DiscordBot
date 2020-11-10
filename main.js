@@ -56,6 +56,9 @@ function commands () {
             setTimeout(() => {msg.reply("DREH DICH UM !!!!!!!!"); }, 10000);
             setTimeout(() => {msg.reply("Muhahahah"); }, 11000);
         }
+        if (msg.content === "Mehr kannst du nicht Karol"){
+            msg.reply("jedenfalls mehr als du")
+        }
     })
 }
 //Do not delete!!!!!!!!!!

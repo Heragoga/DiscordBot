@@ -36,16 +36,16 @@ function commands () {
         if (msg.content === "/hallo karol"){
             msg.reply("Hallo!")
             setTimeout(() => {msg.reply("Wie gehts`s?");}, 2000)
-            if (msg.content === "/gut"){
-                msg.reply("Mir auch.")           
-            }
-            if (msg.content === "/geht"){
-                msg.reply("Mir gut.")           
-            }
-            if (msg.content === "/schlecht"){
-                msg.reply("Warum?")           
-            }
+         }
+        if (msg.content === "/gut"){
+            msg.reply("Mir auch.")           
         }
+        if (msg.content === "/geht"){
+            msg.reply("Mir gut.")           
+        }
+        if (msg.content === "/schlecht"){
+            msg.reply("Warum?")           
+        }     
         if (msg.content === "/bist du dumm"){
             msg.reply("nein aber ich glaube du")
         }

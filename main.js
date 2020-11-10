@@ -50,11 +50,11 @@ function commands () {
             msg.reply("nein aber ich glaube du")
         }
         if (msg.content === "/töte mich"){
-            const attachment = new attachment("/audio/scream1.mp3")
+            
             msg.reply("Okeeee")
             setTimeout(() => {msg.reply("Warte..."); }, 5000);
             setTimeout(() => {msg.reply("DREH DICH UM !!!!!!!!"); }, 10000);
-            setTimeout(() => {msg.reply("Muhahahah", attachment); }, 11000);
+            setTimeout(() => {msg.reply("Muhahahah"); }, 11000);
         }
     })
 }

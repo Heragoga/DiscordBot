@@ -45,11 +45,11 @@ function commands () {
         }
         if (msg.content === "/schlecht"){
             msg.reply("Warum?")           
-        }     
+        }      
         if (msg.content === "/bist du dumm"){
             msg.reply("nein aber ich glaube du")
         }
-        if (msg.content === "/töte mich"){
+        if (msg.content === "/töte mich", msg.content === "/kill"){
             
             msg.reply("Okeeee")
             setTimeout(() => {msg.reply("Warte..."); }, 5000);

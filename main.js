@@ -6,6 +6,13 @@ const client = new Discord.Client();
 client.once('ready', () => {
 console.log('Karol lebt!')
     client.user.setActivity("with Sebastian and Christovie!")
+    console.log('Ready!');
+});
+client.once('reconnecting', () => {
+ console.log('Reconnecting!');
+});
+client.once('disconnect', () => {
+ console.log('Disconnect!');
 //    console.log("Servers:")
 
  //   client.guilds.cache.forEach((guild) => {
@@ -22,7 +29,31 @@ console.log('Karol lebt!')
 commands()
 
 //Funktionen um platz im main code zu sparen
+// Vorlage:
+//  if (msg.content === "/schlecht"){
+//    msg.reply("Warum?")           
+//  }      
+//
+client.on('message', async message => {
+	// Join the same voice channel of the author of the message
+	if (message.member.voice.channel) {
+		const connection = await message.member.voice.channel.join();
+    }
+    // Create a dispatcher
+const dispatcher = connection.play('audio.mp3');
 
+dispatcher.on('start', () => {
+	console.log('audio.mp3 is now playing!');
+});
+
+dispatcher.on('finish', () => {
+	console.log('audio.mp3 has finished playing!');
+});
+
+// Always remember to handle errors appropriately!
+dispatcher.on('error', console.error);
+
+});
 function commands () {
     client.on("message", msg => {
         if (msg.content === "/help"){
@@ -59,6 +90,9 @@ function commands () {
         if (msg.content === "Mehr kannst du nicht Karol"){
             msg.reply("jedenfalls mehr als du")
         }
+        if (msg.content === "/status"){
+            msg.reply("Warum?")           
+        }    
     })
 }
 //Do not delete!!!!!!!!!!

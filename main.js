@@ -37,10 +37,11 @@ commands()
 client.on('message', async message => {
 	// Join the same voice channel of the author of the message
 	if (message.member.voice.channel) {
-		const connection = await message.member.voice.channel.join();
+        const connection = await message.member.voice.channel.join();
+        connection.play('audio.mp3');
     }
     // Create a dispatcher
-    connection.play('audio.mp3');
+
 });
 function commands () {
     client.on("message", msg => {

@@ -34,7 +34,7 @@ commands()
 //    msg.reply("Warum?")           
 //  }      
 //
-client.on('message', async message => {
+client.on('message', message => {
 	// Join the same voice channel of the author of the message
 	if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();

@@ -38,7 +38,7 @@ client.on('message', async message => {
 	// Join the same voice channel of the author of the message
 	if (message.member.voice.channel) {
         const connection = await message.member.voice.channel.join();
-        connection.play('audio.mp3');
+        connection.play('audio.mp3'.on("finish", 'audio.mp3'));
     }
     // Create a dispatcher
 

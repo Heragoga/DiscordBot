@@ -36,11 +36,11 @@ commands()
 //
 client.on('message',  msg => {
 	// Join the same voice channel of the author of the message
-	if (message.content === "/sax") {
+	if (msg.content === "/sax") {
          message.member.voice.channel.join();
         const dispatcher = connection.play('audio.mp3');
     }
-    if (message.content === "/raus") {
+    if (msg.content === "/raus") {
          message.member.voice.channel.leave();
     }
     // Create a dispatcher

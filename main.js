@@ -44,7 +44,7 @@ client.on('message', async message => {
         const connection = await message.member.voice.channel.leave();
     }
     // Create a dispatcher
-    //oiwqjdh
+    //oiwqjd
 });
 function commands () {
     client.on("message", msg => {

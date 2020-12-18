@@ -34,14 +34,15 @@ commands()
 //    msg.reply("Warum?")      w     
 //  }      
 //
-client.on('message',  msg => {
+client.on('message',  message => {
 	// Join the same voice channel of the author of the message
-	if (msg.content === "/sax") {
-         msg.member.voice.channel.join();
-        const dispatcher = connection.play('audio.mp3');
-    }
-    if (msg.content === "/raus") {
-         msg.member.voice.channel.leave();
+	if (message.content === "/sax") {
+        message.member.voice.channel.join();
+        const dispatcher = connection.play('audio.mp3', {
+            volume: 0.5,
+          });
+    if (message.content === "/raus") {
+         message.member.voice.channel.leave();
     }
     // Create a dispatcher
     //oiwqj

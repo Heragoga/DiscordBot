@@ -38,13 +38,13 @@ client.on('message', async message => {
 	// Join the same voice channel of the author of the message
 	if (message.content === "/sax") {
         const connection = await message.member.voice.channel.join();
-        connection.play('audio.mp3', {volume: 0.7});
+        const dispatcher = connection.play('audio.mp3');
     }
     if (message.content === "/raus") {
         const connection = await message.member.voice.channel.leave();
     }
     // Create a dispatcher
-
+    const dispatcher = connection.play('audio.mp3');
 });
 function commands () {
     client.on("message", msg => {

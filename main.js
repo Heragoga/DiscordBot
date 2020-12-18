@@ -39,6 +39,7 @@ client.on('message',  message => {
 	if (message.content === "/sax") {
         message.member.voice.channel.join();
         connection.play('/home/discord/audio.mp3');
+    }
     if (message.content === "/raus") {
          message.member.voice.channel.leave();
     }

@@ -5,7 +5,7 @@ const client = new Discord.Client();
 //initialisation
 client.once('ready', () => {
 console.log('Karol lebt!')
-    client.user.setActivity("with Sebastian and Christovie!")
+    client.user.setActivity("with Sebastian and Christovié!")
     console.log('Ready!');
 });
 client.once('reconnecting', () => {

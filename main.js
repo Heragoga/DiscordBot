@@ -40,6 +40,9 @@ client.on('message', async message => {
         const connection = await message.member.voice.channel.join();
         connection.play('audio.mp3', {volume: 0.7});
     }
+    if (message.content === "/raus") {
+        const connection = await message.member.voice.channel.leave();
+    }
     // Create a dispatcher
 
 });

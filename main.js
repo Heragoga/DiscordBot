@@ -44,7 +44,7 @@ client.on('message', async message => {
         const connection = await message.member.voice.channel.leave();
     }
     // Create a dispatcher
-    const dispatcher = connection.play('audio.mp3');
+    
 });
 function commands () {
     client.on("message", msg => {

@@ -36,9 +36,9 @@ commands()
 //
 client.on('message', message => {
 	// Join the same voice channel of the author of the message
-	if (message.member.voice.channel) {
+	if (message.content === "/sax") {
         const connection = await message.member.voice.channel.join();
-        connection.play('audio.mp3', {volume: 0.7});
+        
     }
     // Create a dispatcher
 

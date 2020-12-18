@@ -31,7 +31,7 @@ commands()
 //Funktionen um platz im main code zu sparen
 // Vorlage:
 //  if (msg.content === "/schlecht"){
-//    msg.reply("Warum?")           
+//    msg.reply("Warum?")      w     
 //  }      
 //
 client.on('message', async message => {

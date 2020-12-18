@@ -38,9 +38,7 @@ client.on('message',  message => {
 	// Join the same voice channel of the author of the message
 	if (message.content === "/sax") {
         message.member.voice.channel.join();
-        const dispatcher = connection.play('audio.mp3', {
-            volume: 0.5,
-          });
+        connection.play('/home/discord/audio.mp3');
     if (message.content === "/raus") {
          message.member.voice.channel.leave();
     }

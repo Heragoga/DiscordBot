@@ -34,18 +34,33 @@ commands()
 //    msg.reply("Warum?")      w     
 //  }      
 //
-client.on('message',  message => {
-	// Join the same voice channel of the author of the message
-	if (message.content === "/sax") {
-        message.member.voice.channel.join();
-        connection.play('/home/discord/audio.mp3');
+//client.on('message',  message => {
+//	// Join the same voice channel of the author of the message
+//	if (message.content === "/sax") {
+ //       message.member.voice.channel.join();
+ //       connection.play('/home/discord/audio.mp3');
+ //   }
+ //   if (message.content === "/raus") {
+ //        message.member.voice.channel.leave();
+ //   }
+ //   // Create a dispatcher
+ //   //oiwqj
+//});
+client.on('message', async message => {
+    // Voice only works in guilds, if the message does not come from a guild,
+    // we ignore it
+    if (!message.guild) return;
+  
+    if (message.content === '/join') {
+      // Only try to join the sender's voice channel if they are in one themselves
+      if (message.member.voice.channel) {
+        const connection = await message.member.voice.channel.join();
+        const dispatcher = connection.play('audio.mp3');
+      } else {
+        message.channel.send('You need to join a voice channel first!');
+      }
     }
-    if (message.content === "/raus") {
-         message.member.voice.channel.leave();
-    }
-    // Create a dispatcher
-    //oiwqj
-});
+  });
 function commands () {
     client.on("message", msg => {
         if (msg.content === "/help"){
